@@ -1,0 +1,1 @@
+# Collection of solutions for simple interview problems in Javascript
