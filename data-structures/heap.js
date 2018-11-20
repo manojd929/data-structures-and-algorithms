@@ -24,7 +24,7 @@
   then,
       Left child exists at '2x'
       Right Child exists at '2x + 1'
-      Its Parent exists at 'X'
+      Its Parent exists at 'X/2'
   
   Priority of the node that gets inserted cannot be greater than its parent
   Every level of the heap must be full, except the lowest level which fills left to right
@@ -62,7 +62,7 @@ class PriorityQueue {
     let currentNodeIndex = this.heap.length - 1;
     let currentNodeParentIndex = Math.floor(currentNodeIndex/2);
 
-    while (this.heap[currentNodeParentIndex] && newNode.priority > this.heap[currentNodeParentIndex].priority) {
+    while (this.heap[currentNodeParentIndex] && (newNode.priority > this.heap[currentNodeParentIndex].priority)) {
       const parent = this.heap[currentNodeParentIndex];
       this.heap[currentNodeParentIndex] = newNode;
       this.heap[currentNodeIndex] = parent;
